@@ -1,7 +1,109 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S1mon009 | Projekty</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="icon" href="img/logo.png" />
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/header.js"></script>
+    <script defer src="js/slider.js"></script>
+  </head>
   <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+    <div class="container">
+      <header>
+        <img class="header_logo" src="img/logo-czarne.png" />
+        <h2>S1mon009 | Projekty</h2>
+        <ul class="nav_links">
+          <li class="nav_item">
+            <a class="nav_link header_item header_item" href="#section--1"
+              >Najnowsze</a
+            >
+          </li>
+          <li class="nav_item">
+            <a class="nav_link header_item header_item" href="#section--2"
+              >Proste</a
+            >
+          </li>
+          <li class="nav_item">
+            <a class="nav_link header_item header_item" href="#section--3"
+              >Zaawansowane</a
+            >
+          </li>
+        </ul>
+        <a
+          class="btn header_item"
+          href="https://www.paypal.com/donate/?hosted_button_id=DE9QMZNG57KD6"
+          target="_blank"
+          >Przekaż darowiznę</a
+        >
+        <div class="toggleSwitch">
+          <label for="checkbox" class="toggler header_item">
+            <input type="checkbox" id="checkbox" />
+            <span class="ball"></span>
+            <i class="fa-solid fa-moon"></i>
+            <i class="fa-solid fa-sun"></i>
+          </label>
+        </div>
+      </header>
+      <div class="slider">
+        <div class="slide">
+          <div class="slide_title">
+            <span class="highlight">Best option</span>
+          </div>
+          <div class="slide_description">
+            <h3>
+              I have used three banks in my entire life, but this one turned out
+              to be the right one. Interactive interface, easy transfers and
+              quick account setup. Just a minute and I was at my favorite bank.
+              <br />
+              Author: <span class="highlight">Jacob</span>
+            </h3>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide_title">
+            <span class="highlight">The best internet bank ever</span>
+          </div>
+          <div class="slide_description">
+            <h3>
+              Only in this bank I was really satisfied with electronic banking.
+              I still wonder why I didn't know him before. Now I cannot imagine
+              my life without this bank. The best decision of my life. I
+              heartily recommend! :)<br />
+              Author: <span class="highlight">James</span>
+            </h3>
+          </div>
+
+          <div class="slide_description"></div>
+        </div>
+        <div class="slide">
+          <div class="slide_title">
+            <span class="highlight">I love this bank</span>
+          </div>
+          <div class="slide_description">
+            <h3>
+              I completely changed my approach to banks the moment I found this
+              bank. From then on, I only use it.
+              <br />
+              Author: <span class="highlight">Scarlet</span>
+            </h3>
+          </div>
+        </div>
+        <button class="slider_btn slider_btn_left">
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button class="slider_btn slider_btn_right">
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+        <div class="dots"></div>
+      </div>
+    </div>
   </body>
 </html>
