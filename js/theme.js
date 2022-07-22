@@ -1,32 +1,47 @@
 "use strict";
 
-const icon = document.getElementById("checkbox");
-const logo = document.querySelectorAll(".header_logo");
-const balls = document.querySelectorAll(".ball");
-const toRight = [
-  ["29px", "-50%"],
-  ["29px", "-50%"],
-  ["29px", "-50%"],
+const themeContainer = document.querySelector(".theme");
+const icon = document.querySelector(".fa-gear");
+const logo = document.querySelector(".logo");
+const colors = [
+  ["#1f1f38", "#4eb5fb"],
+  ["#191a1d", "#ff531b"],
+  ["#02140a", "#5ec576"],
 ];
-const toLeft = [
-  ["0px", "-50%"],
-  ["0px", "-50%"],
-  ["0px", "-50%"],
-];
+const classValue = ["root", "black-orange", "black-green"];
+let hide = false;
+////////////////////////////////////////////////////////
 
-////////////////////////////////////////
-
-function changeTheme(ball) {
-  document.body.classList.toggle("dark-theme");
-  if (document.body.classList.contains("dark-theme")) {
-    logo.forEach((logo) => (logo.src = "img/logo-biale.png"));
-    balls.forEach((b, i) => (b.style.transform = `translate(${toRight[i]})`));
-  } else {
-    logo.forEach((logo) => (logo.src = "img/logo-czarne.png"));
-    balls.forEach((b, i) => (b.style.transform = `translate(${toLeft[i]})`));
+function displayThemes() {
+  for (let i = 0; i < classValue.length; i++) {
+    const color = colors[i];
+    const html = `<div class="theme_value" data-theme="${classValue[i]}" style="background-image: linear-gradient(45deg, ${color[0]} 50%, ${color[1]} 50%);">
+    </div>`;
+    themeContainer.insertAdjacentHTML("beforeend", html);
   }
 }
+displayThemes();
 
-//////////////////////////////////////
+/////////////////////////////////////////////////////
 
-icon.addEventListener("click", changeTheme);
+themeContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("theme_value")) {
+    document.body.className = "";
+    const themeValue = e.target.dataset.theme;
+    localStorage.setItem("themeColor", themeValue);
+    document.body.classList.add(localStorage.getItem("themeColor"));
+  }
+});
+icon.addEventListener("click", function (e) {
+  e.preventDefault();
+  hide = !hide;
+  if (hide) {
+    themeContainer.classList.remove("hide");
+  } else {
+    themeContainer.classList.add("hide");
+  }
+});
+
+///////////////////////////////////////////////////
+
+document.body.classList.add(localStorage.getItem("themeColor"));

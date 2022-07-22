@@ -11,99 +11,124 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="icon" href="img/logo.png" />
+    <script defer src="js/data.js"></script>
+    <script defer src="js/search.js"></script>
     <script defer src="js/theme.js"></script>
-    <script defer src="js/header.js"></script>
-    <script defer src="js/slider.js"></script>
+    <script defer src="js/projects.js"></script>
   </head>
   <body>
     <div class="container">
-      <header>
-        <img class="header_logo" src="img/logo-czarne.png" />
-        <h2>S1mon009 | Projekty</h2>
-        <ul class="nav_links">
-          <li class="nav_item">
-            <a class="nav_link header_item header_item" href="#section--1"
-              >Najnowsze</a
-            >
-          </li>
-          <li class="nav_item">
-            <a class="nav_link header_item header_item" href="#section--2"
-              >Proste</a
-            >
-          </li>
-          <li class="nav_item">
-            <a class="nav_link header_item header_item" href="#section--3"
-              >Zaawansowane</a
-            >
-          </li>
-        </ul>
-        <a
-          class="btn header_item"
-          href="https://www.paypal.com/donate/?hosted_button_id=DE9QMZNG57KD6"
-          target="_blank"
-          >Przekaż darowiznę</a
-        >
-        <div class="toggleSwitch">
-          <label for="checkbox" class="toggler header_item">
-            <input type="checkbox" id="checkbox" />
-            <span class="ball"></span>
-            <i class="fa-solid fa-moon"></i>
-            <i class="fa-solid fa-sun"></i>
-          </label>
+        <header>
+          <a href="https://s1mon009.github.io"
+            ><img class="logo" src="img/logo-biale.png"
+          /></a>
+          <div class="search_box">
+            <input
+            type="search"
+            class="search box_shadow"
+            placeholder="Szukaj..."
+          />
+          <div class="results_part--1 none"></div>
+          <div class="results none">
+            <!-- <div class="result"><a href="./projekty/Stoper/index.html">stoper</a></div> -->
+          </div>
+          </div>
+          
+          <i class="fa-solid fa-gear"></i>
+          <div class="theme hide">
+            <i class="fa-solid fa-caret-up"></i>
+          </div>
+        </header>
+        <div class="section" id="section--1">
+          <div class="section--1_item--1 box_shadow">
+            <div class="section--1_item--1_title decoration">
+              Baza projektów S1mon009
+            </div>
+            <div class="section--1_item--1_description">
+              Na stronie znajdziesz wiele różnych projektów o różnym stopniu
+              zaawansowania:<br />
+              <div class="list">
+                <div class="section--1_list_item--1">
+                  <i class="fa-solid fa-circle"></i> Proste
+                </div>
+                <div class="section--1_list_item--1">
+                  <i class="fa-solid fa-circle"></i> zaawansowane
+                </div>
+              </div>
+              Możesz pobrać kod lub zobaczyć jak działa w realu.
+              <i class="text_decoration">Miłej zabawy!</i>
+            </div>
+          </div>
+          <div class="section--1_item--2">
+            <div class="section--1_item--2_title">
+              <h3>Możesz przeglądać w ponad</h3>
+              <h2 class="number_of_projects"></h2>
+            </div>
+            <div class="section--1_item--2_description">
+              <div class="list" id="listProjects">
+                <!-- <div class="section--1_list_item--2">
+                  <div class="section--1_list_item--2_type">
+                    <i class="fa-solid fa-circle"></i> <h3>HTML:</h3><h3>50%</h3>
+                  </div>
+                  <div class="section--1_list_item--2_range--1"></div>
+                  <div class="section--1_list_item--2_range--2"></div>
+                </div>
+                <div class="section--1_list_item--2">
+                  <div class="section--1_list_item--2_type">
+                    <i class="fa-solid fa-circle"></i> <h3>CSS:</h3><h3>50%</h3>
+                  </div>
+                  <div class="section--1_list_item--2_range--1"></div>
+                  <div class="section--1_list_item--2_range--2"></div>
+                </div> -->
+                
+              </div>
+            </div>
         </div>
-      </header>
-      <div class="slider">
-        <div class="slide">
-          <div class="slide_title">
-            <span class="highlight">Best option</span>
-          </div>
-          <div class="slide_description">
-            <h3>
-              I have used three banks in my entire life, but this one turned out
-              to be the right one. Interactive interface, easy transfers and
-              quick account setup. Just a minute and I was at my favorite bank.
-              <br />
-              Author: <span class="highlight">Jacob</span>
-            </h3>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide_title">
-            <span class="highlight">The best internet bank ever</span>
-          </div>
-          <div class="slide_description">
-            <h3>
-              Only in this bank I was really satisfied with electronic banking.
-              I still wonder why I didn't know him before. Now I cannot imagine
-              my life without this bank. The best decision of my life. I
-              heartily recommend! :)<br />
-              Author: <span class="highlight">James</span>
-            </h3>
-          </div>
-
-          <div class="slide_description"></div>
-        </div>
-        <div class="slide">
-          <div class="slide_title">
-            <span class="highlight">I love this bank</span>
-          </div>
-          <div class="slide_description">
-            <h3>
-              I completely changed my approach to banks the moment I found this
-              bank. From then on, I only use it.
-              <br />
-              Author: <span class="highlight">Scarlet</span>
-            </h3>
-          </div>
-        </div>
-        <button class="slider_btn slider_btn_left">
-          <i class="fa-solid fa-angle-left"></i>
-        </button>
-        <button class="slider_btn slider_btn_right">
-          <i class="fa-solid fa-angle-right"></i>
-        </button>
-        <div class="dots"></div>
       </div>
-    </div>
+      <div class="section" id="section--2">
+        <div class="section_title"><h2>Najnowsze</h2></div>
+        <!-- <div class="project">
+          <div class="project_image">
+            <a href="#"><img src="img/banking-website.png"></a>
+          </div>
+          <div class="project_title decoration"><a href="#">Strona bankowa jest juz praie skonczona wystarczy tylko juz</a></div>
+          <div class="project_categories">
+            <span><i class="fa-solid fa-circle orange"></i> HTML</span>
+            <span><i class="fa-solid fa-circle blue"></i> CSS</span>
+            <span><i class="fa-solid fa-circle yellow"></i> JavaScript</span>
+            <span><i class="fa-solid fa-code"></i
+              > zaawansowane</span>
+              
+          </div>
+          <div class="project_buttons">
+            <a href=""><button class="btn"><span>Github</span></button></a>
+            <a href=""><button class="btn"><span>Live demo</span></button></a>
+          </div>
+        </div> -->
+      </div>
+      <div class="section" id="section--3">
+        <div class="section_title"><h2>Proste</h2></div>
+      </div>
+      <div class="section" id="section--4">
+        <div class="section_title"><h2>Zaawansowane</h2></div>
+      </div>
+        <div class="tabs">
+        <input type="radio" id="radio--1" name="tabs" checked value="#section--1">
+        <label class="tab" for="radio--1"><i class="fa-solid fa-house active"></i
+          ></label>
+          <input type="radio" id="radio--2" name="tabs">
+        <label class="tab" for="radio--2"><i class="fa-brands fa-codepen"></i
+          ></label>
+          <input type="radio" id="radio--3" name="tabs">
+        <label class="tab" for="radio--3"><i class="fa-solid fa-code-branch"></i
+          ></label>
+          <input type="radio" id="radio--4" name="tabs">
+        <label class="tab" for="radio--4"><i class="fa-solid fa-code"></i
+          ></label>
+          <input type="radio" id="radio--5" name="tabs">
+        <label class="tab" for="radio--5"><i class="fa-solid fa-envelope"></i
+          ></label>
+          <span class="glider"></span>
+      </div>
   </body>
 </html>
