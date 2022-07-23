@@ -37,6 +37,7 @@ i {
 body {
   background: var(--body-color);
   overflow-x: hidden;
+  width: 100%;
 }
 /*Basic elements*/
 .btn {
@@ -285,14 +286,14 @@ li {
 }
 .section {
   width: 100%;
-  min-height: 500px;
-  z-index: 1;
-  padding: 30px;
+  height: auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 40px 40px 40px 40px;
+  z-index: 1;
   border-bottom: 2px solid rgba(166, 166, 166, 0.751);
 }
 .section_title {
@@ -420,9 +421,12 @@ li {
     rgba(0, 0, 0, 0) 100%
   );
 }
+.slide_title img {
+  position: absolute;
+}
 .slide_title h2 {
-  width: 100%;
   color: var(--header-text-color);
+  padding-left: 35%;
 }
 .slider_btn {
   position: absolute;
@@ -557,7 +561,7 @@ li {
   padding-top: 0 50px 20px 50px;
 }
 .contact_info {
-  width: 400px;
+  width: 440px;
   height: auto;
   padding: 20px;
   text-align: center;
@@ -569,6 +573,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 20px 0;
 }
 .contact_line::before {
   content: "Lub";
@@ -587,10 +592,10 @@ li {
   margin: 20px;
 }
 form {
-  width: 400px;
+  max-width: 400px;
   position: relative;
   height: auto;
-  padding: 40px;
+  padding: 60px 40px 40px 40px;
   /* From https://css.glass */
   background: var(--header-text-color);
   border-radius: 30px;
@@ -601,7 +606,7 @@ label {
   position: absolute;
   font-size: 20px;
   cursor: pointer;
-  transform: translate(0px, -35px);
+  transform: translate(0px, -25px);
 }
 input {
   background: var(--body-color);
@@ -628,14 +633,137 @@ textarea {
   padding: 10px;
   font-size: 20px;
 }
+
 .contact_info .btn {
   width: 40%;
-  margin: 0 10px;
+  padding: 20px;
+  margin: 10px;
 }
 @media (max-width: 700px) {
-  .offert {
-    transform: scale(1);
-    margin: 10px;
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .section:first-child {
+    padding: 10px 20px;
+  }
+  .contact_line {
+    width: 100%;
+    height: 5px;
+  }
+  .contact_info:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section {
+    padding: 0;
+  }
+  .navbar {
+    display: none;
+  }
+  .header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header ul {
+    display: none;
+  }
+  .typed {
+    width: 100%;
+    overflow: hidden;
+  }
+  .typed_text {
+    font-size: 35px;
+  }
+  .hamburger {
+    width: 50px;
+    height: 50px;
+  }
+  .hamburger {
+    position: relative;
+    display: inline-flex;
+    z-index: 100;
+    height: 80px;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  .hamburger_navbar {
+    padding-top: 60px;
+    overflow-y: auto;
+  }
+  .hamburger_link li a {
+    font-size: 30px;
+  }
+  .products_list li a {
+    font-size: 20px;
+  }
+  .line {
+    position: absolute;
+    width: 40px;
+  }
+  .line-main::before,
+  .line-main::after,
+  .line-split::before,
+  .line-split::after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: 2px;
+    background: var(--header-text-color);
+    transition: transform 0.5s;
+  }
+  .line-main::before {
+    transform: translateY(-7px);
+  }
+  .line-main::after {
+    transform: translateY(7px);
+  }
+  .line-split::before,
+  .line-split::after {
+    width: 30px;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  .line-split::after {
+    transform: translateX(10px);
+  }
+  #checkbox:checked ~ .line-main::before {
+    transform: rotate(45deg);
+  }
+  #checkbox:checked ~ .line-main::after {
+    transform: rotate(-45deg);
+  }
+  #checkbox:checked ~ .line-split::before {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  #checkbox:checked ~ .line-split::after {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  .slider_btn_left {
+    left: 15%;
+    transform: translate(-80%, -50%);
+    color: var(--navbar-color);
+  }
+  .slider_btn_right {
+    right: 15%;
+    transform: translate(80%, -50%);
+    color: var(--navbar-color);
+  }
+}
+@media (max-width: 370px) {
+  .slide {
+    width: 100%;
+  }
+  .contact_info .btn {
+    width: 100%;
+    margin: 10px 0;
   }
 }
 /* @media (max-width: 1120px) {
