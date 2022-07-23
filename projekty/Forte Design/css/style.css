@@ -589,7 +589,17 @@ li {
 .contact_info h2:nth-child(2),
 .contact_info h2:nth-child(3) {
   outline: 3px solid var(--header-text-color);
+  background: var(--header-text-color);
+  color: var(--header-color);
   margin: 20px;
+}
+.contact_info h2 i {
+  font-size: 30px;
+}
+.contact_info i {
+  font-size: 60px;
+  cursor: pointer;
+  width: 60px;
 }
 form {
   max-width: 400px;
@@ -639,7 +649,7 @@ textarea {
   padding: 20px;
   margin: 10px;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   body {
     width: 100%;
     overflow-x: hidden;
@@ -648,7 +658,7 @@ textarea {
     padding: 10px 20px;
   }
   .contact_line {
-    width: 100%;
+    width: 600px;
     height: 5px;
   }
   .contact_info:last-child {
